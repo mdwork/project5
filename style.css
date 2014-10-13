@@ -3156,11 +3156,10 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -367px;
 }
 /* line 18, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #wrapper #wrapper-footer {
-  height: 367px;
+  height: 15px;
 }
 
 /* line 20, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
@@ -3551,7 +3550,7 @@ header .sprite-lets-talk {
   display: block;
   background: #83ab19;
   color: white;
-  padding: 16px 20px 15px 20px;
+  padding: 16px 20px 15px;
   font-size: 16px;
   text-transform: uppercase;
   font-family: 'din-boldregular';
@@ -4003,10 +4002,8 @@ footer #footer-chair {
  * template: **callout
  * * * * * * * * * * * * * */
 /* line 375, ../sass/_core.scss */
-#homepage-callout {
-  position: absolute;
-  top: -335px;
-  left: -16.6%;
+#tpl_testimonials {
+    padding-bottom: 25px !important;
 }
 /* line 377, ../sass/_core.scss */
 #homepage-callout .homepage-callout-content {
@@ -4840,6 +4837,9 @@ h1, h2, h3, h4, h5, h6 {
     header #header-right nav ul li a {
         font-size: 13px;
     }
+    #subnav ul li a {
+        padding: 16px 10px 15px;
+    }
 }
 @media screen and (min-width: 750px) and (max-width: 800px) {
     #sidebar .sidebar-container {
@@ -4848,6 +4848,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 @media screen and (max-width: 769px) {
+    #sidebar {
+        overflow: hidden;
+        margin-top: 0 !important;
+    }
+    #social-sidebar {
+        height: auto !important;
+    }
+    #home #sidebar .free-quote-top {
+        padding-bottom: 0;
+    }
     .video-container {
         margin-right: 10px;
     }
@@ -4994,6 +5004,14 @@ h1, h2, h3, h4, h5, h6 {
         width: 100% !important;
     }
 }
+@media screen and (max-width: 650px) {
+    #subnav {
+        height: 50px;
+    }
+    #subnav ul li a {
+        font-size: 12px;
+    }
+}
 @media screen and (max-width: 560px) {
     .overlay_content_container div {
         left: 0 !important;
@@ -5001,13 +5019,19 @@ h1, h2, h3, h4, h5, h6 {
     #overlay_close {
         top: -25px;
     }
+    .row .row {
+        margin: 0;
+    }
+    #subnav {
+        height: auto;
+    }
+    #subnav ul li {
+        float: none;
+    }
 }
 @media screen and (max-width: 550px) {
     .secondary-promo-container .secondary-promo {
         width: 100%;
-    }
-    #homepage-callout {
-        top: -395px;
     }
 }
 @media screen and (max-width: 480px) {

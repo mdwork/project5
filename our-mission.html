@@ -55,6 +55,21 @@
             s.parentNode.insertBefore(ga, s);
         })();
     </script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            $('#nav-wrap').prepend('<div id="menu-icon"></div>');
+
+            $("#menu-icon").on("click", function(){
+                $("#nav").slideToggle();
+                $(this).toggleClass("active");
+            });
+
+            $('.overlay_content_container > div').width(window.screen);
+        });
+    </script>
 </head>
 
 <body>
@@ -101,8 +116,8 @@
             </div>
 
             <div id="header-right" class="ten columns">
-                <nav class="pull-right">
-                    <ul>
+                <nav class="pull-right" id="nav-wrap">
+                    <ul id="nav">
                         <li>
                             <a class="current" href="our-mission.html">MOVING</a>
                             <div class="subnav-container">
